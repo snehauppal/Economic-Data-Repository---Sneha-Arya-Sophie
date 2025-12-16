@@ -10,13 +10,11 @@ This section explains how to run the FastAPI application defined in
 `api/app.py`, which exposes a Qwen-based Retrieval-Augmented Generation (RAG)
 API over the cleaned economic dataset.
 
----
-
-## 1. Clone the Repository
+```bash
 
 Clone the repository to the VM or local machine:
 
-```bash
+
 git clone https://github.com/aryakumar2005-rgb/Economic-Data-Repository---Sneha-Arya-Sophie.git
 cd Economic-Data-Repository---Sneha-Arya-Sophie
 
@@ -26,6 +24,7 @@ cd Economic-Data-Repository---Sneha-Arya-Sophie
 scp -i ~/.ssh/ds2002/ds2002_shared_student_key \
     ~/Downloads/etl_cleaned_dataset.csv \
     student@34.48.211.118:/home/student/Economic-Data-Repository---Sneha-Arya-Sophie/data/
+## After that step, the dataset should exist at: Economic-Data-Repository---Sneha-Arya-Sophie/data/etl_cleaned_dataset.csv
 
 ### VM Environment Setup - The API is designed to run on a Linux VM. Enter your virtual machine and enter this
 sudo apt update && sudo apt -y upgrade
@@ -44,7 +43,7 @@ pip install huggingface_hub fastapi uvicorn pandas
 source ~/hf-cli-bot/.venv/bin/activate
 cd ~/Economic-Data-Repository---Sneha-Arya-Sophie/api
 
-##start the server (server commmand and curl example is also included as a comment in the repo app.py)
+##start the server (server command and curl example is also included as a comment in the repo app.py)
 python -m uvicorn app:app --host 0.0.0.0 --port 8000
 
 ##example curl - Once the FastAPI server is running, the API can be queried directly from the
