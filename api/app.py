@@ -101,3 +101,21 @@ Answer:
 @app.get("/")
 def root():
     return {"status": "ok"}
+
+
+#CURL Testing example and server command
+# The following curl command demonstrates how to query the API
+# once the server is running with this server command
+#   uvicorn app:app --host 0.0.0.0 --port 8000
+#
+# curl -X POST http://localhost:8000/api/ask \
+#   -H "Content-Type: application/json" \
+#   -d '{
+#         "question": "What was the unemployment rate in the United States in 2019?"
+#       }'
+#
+# Expected response:
+# {
+#   "answer": "The unemployment rate in the United States in 2019 was 3.7%.",
+#   "sources": [...]
+# }
