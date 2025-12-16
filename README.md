@@ -4,11 +4,22 @@
 
 
 
-PART THREE EXECUTION INSTRUCTIONS
-## Cloning the Repository
+## PART THREE EXECUTION INSTRUCTIONS
+
+This section explains how to run the FastAPI application defined in
+`api/app.py`, which exposes a Qwen-based Retrieval-Augmented Generation (RAG)
+API over the cleaned economic dataset.
+
+---
+
+## 1. Clone the Repository
+
 Clone the repository to the VM or local machine:
+
+```bash
 git clone https://github.com/aryakumar2005-rgb/Economic-Data-Repository---Sneha-Arya-Sophie.git
 cd Economic-Data-Repository---Sneha-Arya-Sophie
+
 
 ## SCP Command to get dataset into virtual machine - first download the dataset from the data folder in our repo and then use this command (altered for your VM to get the dataset from your local downloads into your VM
 
